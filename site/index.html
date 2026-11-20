@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Speed-to-lead dashboard — paint shop, Pune</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;color:#1d2433}
+h1{font-size:1.4rem} h2{font-size:1.1rem;margin-top:2rem}
+.status{background:#eef4ff;border-left:4px solid #3a6ff7;padding:.6rem 1rem}
+.syn{background:#fff3cd;border:2px solid #d39e00;padding:.6rem 1rem;font-weight:600;margin-bottom:1rem}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.8rem}
+.kpi{border:1px solid #dde3ee;border-radius:8px;padding:.8rem} .kpi b{font-size:1.5rem;display:block}
+table{border-collapse:collapse;width:100%;font-size:.9rem} td,th{border-bottom:1px solid #eee;padding:.35rem;text-align:left}
+.bar{display:inline-block;height:.7rem;background:#3a6ff7;border-radius:3px} small{color:#667}
+</style></head><body>
+
+<h1>Speed-to-lead — United Trader (paint retail, Undri, Pune)</h1>
+<p class="status">Week 0 — baseline logging not started. This page fills as real enquiries are logged.</p>
+<div class="kpis">
+<div class="kpi"><b>0</b>leads</div>
+<div class="kpi"><b>—</b>WhatsApp leads auto-answered ≤60 s</div>
+<div class="kpi"><b>—</b>auto first response, median (p90 —)</div>
+<div class="kpi"><b>—</b>human first response, median (p90 —)</div>
+<div class="kpi"><b>—</b>human reply ≤5 min (shop hours)</div>
+</div>
+<h2>Before / after</h2>
+<p><small>Baseline = 2 weeks of the old manual process logged by the shop before go-live
+(0 days logged, 0 enquiries never
+replied). Times count from shop-open time.</small></p>
+<table><tr><th></th><th>Baseline (manual)</th><th>Live (system)</th></tr><tr><td>Leads</td><td>0</td><td>0</td></tr><tr><td>First human reply — median</td><td>—</td><td>—</td></tr><tr><td>First human reply — p90</td><td>—</td><td>—</td></tr><tr><td>Replied within 5 min</td><td>—</td><td>—</td></tr><tr><td>Lead → sale conversion</td><td>—</td><td>—</td></tr><tr><td>Revenue (won)</td><td>₹0</td><td>₹0</td></tr></table>
+<h2>Funnel</h2><table><tr><td>Leads</td><td>0</td><td><span class="bar" style="width:1%"></span></td></tr><tr><td>Human contacted</td><td>0</td><td><span class="bar" style="width:1%"></span></td></tr><tr><td>Quotation sent</td><td>0</td><td><span class="bar" style="width:1%"></span></td></tr><tr><td>Won (invoiced)</td><td>0</td><td><span class="bar" style="width:1%"></span></td></tr></table>
+<h2>By source</h2>
+<table><tr><th>Source</th><th>Leads</th><th></th><th>Contacted</th><th>Quoted</th><th>Won</th><th>Revenue</th><th></th></tr>
+<tr><td colspan="8">No leads yet.</td></tr></table>
+<p><small>Anonymised aggregates only — no names or phone numbers. Generated 2026-11-20T06:46:57.705Z.
+Source code: speed-to-lead repository.</small></p>
+</body></html>

@@ -1,0 +1,11 @@
+.venv
+.git
+data
+demo_output
+site
+tests
+.env
+*.db*
+.mypy_cache
+.ruff_cache
+.pytest_cache

@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-11-20T06:46:57.705Z",
+  "synthetic": false,
+  "leads_total": 0,
+  "auto_first_response_sec": {
+    "n": 0,
+    "median": null,
+    "p90": null,
+    "max": null
+  },
+  "pct_auto_within_60s": null,
+  "whatsapp_leads": 0,
+  "human_first_response_min": {
+    "n": 0,
+    "median": null,
+    "p90": null,
+    "max": null
+  },
+  "pct_human_within_5min": null,
+  "by_source": {},
+  "funnel": {
+    "leads": 0,
+    "contacted": 0,
+    "quoted": 0,
+    "won": 0,
+    "revenue": 0
+  },
+  "before_after": {
+    "baseline": {
+      "leads": 0,
+      "days_logged": 0,
+      "never_replied": 0,
+      "human_first_response_min": {
+        "n": 0,
+        "median": null,
+        "p90": null,
+        "max": null
+      },
+      "pct_human_within_5min": null,
+      "conversion_pct": null,
+      "revenue": 0
+    },
+    "live": {
+      "leads": 0,
+      "human_first_response_min": {
+        "n": 0,
+        "median": null,
+        "p90": null,
+        "max": null
+      },
+      "pct_human_within_5min": null,
+      "conversion_pct": null,
+      "revenue": 0
+    }
+  }
+}

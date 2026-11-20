@@ -1,0 +1,97 @@
+{
+  "_note": "Ready to submit in WhatsApp Manager -> Message templates -> Create, or via POST /{WABA_ID}/message_templates (one object per call). Meta decides the final category; 'ut_enquiry_followup' may be re-categorised as MARKETING. Templates are only sent when STL_ALLOW_PAID_TEMPLATES=true; check Meta's current rate card first.",
+  "templates": [
+    {
+      "name": "ut_enquiry_received",
+      "language": "en",
+      "category": "UTILITY",
+      "components": [
+        {"type": "BODY",
+         "text": "Hello {{1}}, thank you for your enquiry about {{2}} at United Trader, Undri. Our team will call you {{3}}. Price list: {{4}}\n\nReply STOP to stop messages.",
+         "example": {"body_text": [["Asha", "waterproofing", "within 10 minutes", "https://example.com/price-list"]]}}
+      ]
+    },
+    {
+      "name": "ut_enquiry_received",
+      "language": "hi",
+      "category": "UTILITY",
+      "components": [
+        {"type": "BODY",
+         "text": "नमस्ते {{1}}, यूनाइटेड ट्रेडर, उंड्री में {{2}} की पूछताछ के लिए धन्यवाद। हमारी टीम आपको {{3}} कॉल करेगी। रेट लिस्ट: {{4}}\n\nमैसेज बंद करने के लिए STOP लिखें।",
+         "example": {"body_text": [["आशा", "वॉटरप्रूफिंग", "10 मिनट में", "https://example.com/price-list"]]}}
+      ]
+    },
+    {
+      "name": "ut_quote_ready",
+      "language": "en",
+      "category": "UTILITY",
+      "components": [
+        {"type": "BODY",
+         "text": "Hello {{1}}, your quotation for {{2}} is ready: Rs {{3}} (valid for 7 days). Reply here to confirm or ask any question.\n\nUnited Trader, Undri. Reply STOP to stop messages.",
+         "example": {"body_text": [["Asha", "2BHK interior painting", "42,000"]]}}
+      ]
+    },
+    {
+      "name": "ut_quote_ready",
+      "language": "hi",
+      "category": "UTILITY",
+      "components": [
+        {"type": "BODY",
+         "text": "नमस्ते {{1}}, {{2}} का कोटेशन तैयार है: ₹{{3}} (7 दिन के लिए मान्य)। कन्फ़र्म करने या कोई सवाल पूछने के लिए यहीं जवाब दें।\n\nयूनाइटेड ट्रेडर, उंड्री। मैसेज बंद करने के लिए STOP लिखें।",
+         "example": {"body_text": [["आशा", "2BHK अंदर की पेंटिंग", "42,000"]]}}
+      ]
+    },
+    {
+      "name": "ut_enquiry_followup",
+      "language": "en",
+      "category": "UTILITY",
+      "components": [
+        {"type": "BODY",
+         "text": "Hello {{1}}, we tried to reach you about your {{2}} enquiry. When is a good time for us to call? Tap a button below or reply here.",
+         "example": {"body_text": [["Asha", "exterior painting"]]}},
+        {"type": "FOOTER", "text": "Reply STOP to stop messages"},
+        {"type": "BUTTONS", "buttons": [
+          {"type": "QUICK_REPLY", "text": "Call me today"},
+          {"type": "QUICK_REPLY", "text": "Call me tomorrow"},
+          {"type": "QUICK_REPLY", "text": "Not needed"}
+        ]}
+      ]
+    },
+    {
+      "name": "ut_enquiry_followup",
+      "language": "hi",
+      "category": "UTILITY",
+      "components": [
+        {"type": "BODY",
+         "text": "नमस्ते {{1}}, हमने आपकी {{2}} की पूछताछ के बारे में संपर्क करने की कोशिश की। आपको कॉल करने का सही समय क्या है? नीचे बटन दबाएँ या यहीं जवाब दें।",
+         "example": {"body_text": [["आशा", "बाहर की पेंटिंग"]]}},
+        {"type": "FOOTER", "text": "मैसेज बंद करने के लिए STOP लिखें"},
+        {"type": "BUTTONS", "buttons": [
+          {"type": "QUICK_REPLY", "text": "आज कॉल करें"},
+          {"type": "QUICK_REPLY", "text": "कल कॉल करें"},
+          {"type": "QUICK_REPLY", "text": "ज़रूरत नहीं"}
+        ]}
+      ]
+    },
+    {
+      "name": "ut_owner_lead_alert",
+      "language": "en",
+      "category": "UTILITY",
+      "components": [
+        {"type": "BODY",
+         "text": "New enquiry {{1}} from {{2}}, score {{3}}. Please reply within 5 minutes: {{4}} (United Trader lead system)",
+         "example": {"body_text": [["waterproofing 2BHK", "WhatsApp", "78", "https://example.com/staff/lead/abc"]]}}
+      ]
+    },
+    {
+      "name": "ut_owner_lead_alert",
+      "language": "hi",
+      "category": "UTILITY",
+      "components": [
+        {"type": "BODY",
+         "text": "नई पूछताछ {{1}}, {{2}} से, स्कोर {{3}}। कृपया 5 मिनट में जवाब दें: {{4}} (यूनाइटेड ट्रेडर लीड सिस्टम)",
+         "example": {"body_text": [["वॉटरप्रूफिंग 2BHK", "WhatsApp", "78", "https://example.com/staff/lead/abc"]]}}
+      ]
+    }
+  ]
+}

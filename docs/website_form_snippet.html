@@ -1,0 +1,26 @@
+<!-- Paste into the website / landing page. Replace YOUR-SERVICE with the deployed URL and add the site to
+     STL_FORM_ALLOWED_ORIGINS. After submit, the visitor gets a WhatsApp button that opens a chat they start
+     themselves, which is free for the shop and keeps the source tag (ref:web). -->
+<form id="ut-enquiry">
+  <input name="name" placeholder="Name / नाम">
+  <input name="phone" placeholder="Mobile / मोबाइल" required inputmode="tel">
+  <textarea name="message" placeholder="Work, size, area / काम, साइज़, एरिया"></textarea>
+  <input name="website" style="display:none" tabindex="-1" autocomplete="off"><!-- honeypot -->
+  <label><input type="checkbox" name="consent" value="1" required>
+    I agree that United Trader may contact me on WhatsApp/phone about this enquiry. /
+    मैं इस पूछताछ के लिए WhatsApp/फ़ोन पर संपर्क की सहमति देता/देती हूँ।</label>
+  <button>Get rate / रेट पाएँ</button>
+</form>
+<p id="ut-done" hidden>Thank you! Tap to continue on WhatsApp: <a id="ut-wa" href="#">Open WhatsApp</a></p>
+<script>
+document.getElementById("ut-enquiry").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(e.target));
+  data.utm_source = new URLSearchParams(location.search).get("utm_source") || "";
+  const r = await fetch("https://YOUR-SERVICE/webhooks/form", {
+    method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(data)});
+  const j = await r.json();
+  if (j.whatsapp_link) { document.getElementById("ut-wa").href = j.whatsapp_link; }
+  e.target.hidden = true; document.getElementById("ut-done").hidden = false;
+});
+</script>
